@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="TEViewController" sceneMemberID="viewController">
@@ -15,13 +15,61 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Y1N-WE-hcX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="It is decidely so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="245" translatesAutoresizingMaskIntoConstraints="NO" id="6cR-i9-QJP">
+                                <rect key="frame" x="38" y="232" width="245" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="Tdy-Ia-7c6"/>
+                                    <constraint firstAttribute="height" constant="103" id="qwr-SH-BKZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.57776409646739135" green="0.25847007492393537" blue="0.15301286775551207" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Y1N-WE-hcX" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="0lT-IP-0Ra"/>
+                            <constraint firstItem="Y1N-WE-hcX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="FjV-Oz-dNh"/>
+                            <constraint firstItem="Y1N-WE-hcX" firstAttribute="centerY" secondItem="6cR-i9-QJP" secondAttribute="centerY" constant="31.5" id="Nrh-9u-8vc"/>
+                            <constraint firstAttribute="trailing" secondItem="Y1N-WE-hcX" secondAttribute="trailing" id="QQa-iC-wEH"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Y1N-WE-hcX" secondAttribute="bottom" id="fS8-g8-NSl"/>
+                            <constraint firstItem="Y1N-WE-hcX" firstAttribute="centerX" secondItem="6cR-i9-QJP" secondAttribute="centerX" constant="-0.5" id="zG4-PJ-66a"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Y1N-WE-hcX" id="JE8-JL-EBk"/>
+                        <outlet property="predictionLabel" destination="6cR-i9-QJP" id="e8u-dg-FA8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hJE-Xx-PNo">
+            <objects>
+                <viewController id="cBf-dL-hql" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Skr-0U-7fc"/>
+                        <viewControllerLayoutGuide type="bottom" id="WYM-5u-47f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WXm-IL-7iB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7qb-N0-r8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
+    <resources>
+        <image name="background" width="320" height="568"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
